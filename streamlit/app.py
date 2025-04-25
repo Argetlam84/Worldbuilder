@@ -10,6 +10,7 @@ import os
 
 if os.path.exists(".env"):
     load_dotenv()
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 else:
     GOOGLE_API_KEY = st.text_input("Enter your Google API KEY", type="password")
     if GOOGLE_API_KEY:
